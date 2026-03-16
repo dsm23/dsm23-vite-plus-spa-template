@@ -1,4 +1,4 @@
-name: Format check
+name: Lint check
 
 on:
   push:
@@ -15,7 +15,7 @@ env:
 permissions: {}
 
 jobs:
-  format:
+  lint:
     runs-on: ubuntu-24.04
     steps:
       - name: Harden Runner
@@ -35,5 +35,5 @@ jobs:
           node-version-file: ".node-version"
           version: "0.1.12"
 
-      - name: Format check
-        run: vp fmt --check
+      - name: Lint check
+        run: vp lint
