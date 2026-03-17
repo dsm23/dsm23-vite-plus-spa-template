@@ -37,3 +37,6 @@ jobs:
 
       - name: Lint check
         run: vp lint
+
+      - name: Lint Unused Dependencies
+        run: vp exec knip
